@@ -1,0 +1,34 @@
+{
+  "name": "test3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve src/index.html --no-cache --open --log-level 3",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist && rm -f tsconfig.*.tsbuildinfo",
+    "yarnLint":"yarn lint-fix",
+    "build": "yarn tsc",
+    "build:dry": "yarn tsc -p tsconfig.ci.json",
+    "build:clean": "yarn clean && yarn build",
+    "build:watch": "yarn tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@luban/devenv": "^1.3.0",
+    "@luban/linter": "1.10",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "typescript": "3.9"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "parcel-bundler": "^1.12.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
